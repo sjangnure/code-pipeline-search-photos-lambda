@@ -118,62 +118,7 @@ def validate_search_request(noun_1, noun_2 ):
                                            'The input value for second slot is invalid as it contains numbers. Please enter a valid value'
                                          .format(str(noun_2)))
     # if drinks is not None:
-    #     if str(drinks).isnumeric():
-    #         return build_validation_result(False,
-    #                                        'Drinks',
-    #                                        'The input drink {} is invalid as it contains numbers. '
-    #                                        'Please enter a valid drink'
-    #                                        .format(str(drinks)))
-    # if date is not None:
-    #     # Handle if date is today or tomorrow and handle for date formats other than mm--dd-yyyy
-    #     if not isvalid_date(date):
-    #         return build_validation_result(False, 'Date', 'I did not understand that, what date would you like '
-    #                                                       'to book a reservation? '
-    #                                                       'Please enter date in the format MM-DD-YYYY (with hyphens)' )
-    #     elif datetime.datetime.strptime(date, '%Y-%m-%d').date() < datetime.date.today():
-    #         return build_validation_result(False, 'Date', 'You can book restaurants from today. The date entered is not valid   '
-    #                                                       'What day would you like to book a table?')
-    #
-    # if phone_number is not None:
-    #     phone_number = str(phone_number)
-    #     if not phone_number[0:1] == "+1":
-    #         return build_validation_result(False, 'Phone_Number', 'The phone number entered does not have the country '
-    #                                                               'code or is not a US phone number.  '
-    #                                                               'Please enter a US number starting with +1')
-    #     phone_number = phone_number[2 :]
-    #     if not int(phone_number) or len(phone_number) != 10:
-    #         if not phone_number[0:2] == "+1":
-    #             return build_validation_result(False, 'Phone_Number',
-    #                                            'The phone number entered is not a valid phone number '
-    #                                            'Please enter a US number starting with +1')
-    #
-    # if no_of_people is not None:
-    #     if not int(no_of_people):
-    #         return build_validation_result(False, 'No_of_people',
-    #                                        'The no of people entered is not a number '
-    #                                        'Please enter a number')
-    #     if int(no_of_people) <1:
-    #         return build_validation_result(False, 'No_of_people',
-    #                                        'The no of people entered is less than 1 '
-    #                                        'Please enter a number greater than 1')
-    # Tejas
-    # Pick up time not considered currently
-
-    # if pickup_time is not None:
-    #     if len(pickup_time) != 5:
-    #         # Not a valid time; use a prompt defined on the build-time model.
-    #         return build_validation_result(False, 'PickupTime', None)
-    #
-    #     hour, minute = pickup_time.split(':')
-    #     hour = parse_int(hour)
-    #     minute = parse_int(minute)
-    #     if math.isnan(hour) or math.isnan(minute):
-    #         # Not a valid time; use a prompt defined on the build-time model.
-    #         return build_validation_result(False, 'PickupTime', None)
-    #
-    #     if hour < 10 or hour > 16:
-    #         # Outside of business hours
-    #         return build_validation_result(False, 'PickupTime', 'Our business hours are from ten a m. to five p m. Can you specify a time during this range?')
+    #     if steturn build_validation_result(False, 'PickupTime', 'Our business hours are from ten a m. to five p m. Can you specify a time during this range?')
 
     return build_validation_result(True, None, None)
 
@@ -381,4 +326,4 @@ def lambda_handler(event, context):
     
     finally:
         # This means call was made by API Gateway
-        print("Timepass")
+        print("Reached finally")
